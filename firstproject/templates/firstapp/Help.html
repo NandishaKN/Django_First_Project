@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Success</title>
+    <link rel="stylesheet" href="{% static 'css/mettle.css' %}">
+</head>
+<body>
+  <h1>Here are your users: </h1>
+    {% if access_users %}
+        {% for access in access_users %}
+        <ol>
+            <li>User Info</li>
+            <ul>
+                <li>First Name: {{access.first_name}}</li>
+                <li>Last Name: {{access.last_name}}</li>
+                <li>Email : {{access.email}}</li>
+            </ul>
+        </ol>
+        {% endfor %}
+    {% else %}
+        <p>No users data found</p>
+    {% endif %}
+
+
+
+</body>
+</html>

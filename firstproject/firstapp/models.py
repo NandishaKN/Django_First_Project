@@ -20,7 +20,7 @@ class AccessRecord(models.Model):
     date = models.DateField()
 
 class User(models.Model):
-    first_name = models.CharField(max_length=256)
+    first_name = models.CharField()
     last_name = models.CharField(max_length=256)
     email=models.EmailField(max_length=256)
 
